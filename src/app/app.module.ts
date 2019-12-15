@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule, MatCardModule, MatButtonModule, MatToolbarModule } from '@angular/material';
@@ -14,16 +14,15 @@ import { PostListComponent } from './posts/post-list/post-list.component';
 import { from } from 'rxjs';
 
 @NgModule({
-  schemas: [
-    CUSTOM_ELEMENTS_SCHEMA
-  ],
+  // schemas: [
+  //   CUSTOM_ELEMENTS_SCHEMA
+  // ],
   declarations: [
     AppComponent,
     PostsComponent,
     PostCreateComponent,
     HeaderComponent,
     PostListComponent,
-    MatExpansionModule
   ],
   imports: [
     BrowserModule,
@@ -33,7 +32,9 @@ import { from } from 'rxjs';
     MatInputModule,
     MatCardModule,
     MatButtonModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatExpansionModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
