@@ -12,8 +12,7 @@ export class PostCreateComponent implements OnInit {
   enteredValue = '';
   tesOutput = 'hello';
   constructor() {
-    // this.tesOutput = 'hello';
-   }
+    }
 
   ngOnInit() {
   }
