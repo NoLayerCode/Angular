@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Alert } from 'selenium-webdriver';
 
 @Component({
@@ -9,16 +9,19 @@ import { Alert } from 'selenium-webdriver';
 
 export class PostCreateComponent implements OnInit {
 
-  enteredValue = '';
-  tesOutput = '';
+  enteredContent = '';
+  enteredTitle = '';
+  @Output() postCreated = new EventEmitter();
+
   constructor() {
-    }
+  }
 
   ngOnInit() {
   }
 
   onClick() {
-    // console.dir(testInput);
-    this.tesOutput = this.enteredValue;
+    const post = { title: this.enteredTitle, content: this.enteredContent };
+
+    this.postCreated.emit(post);
   }
 }

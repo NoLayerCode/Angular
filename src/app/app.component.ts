@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { post } from 'selenium-webdriver/http';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'mean-stack';
+
+  storedPosts = [];
+
+  // tslint:disable-next-line: no-shadowed-variable
+  onPostAdded( post ) {
+    this.storedPosts.push(post);
+
+  }
 }
