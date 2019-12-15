@@ -1,5 +1,6 @@
-<p>post-create works!</p>
-<textarea  cols="10" rows="6"  [(ngModel)]="enteredValue"></textarea>
-<br>
-<button (click)="onClick()"> Save</button>
-<p>{{ tesOutput }}</p>
+<mat-card>
+  <mat-form-field>
+    <textarea matInput [(ngModel)]="enteredValue"></textarea>
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="onClick()">Save</button>
+</mat-card>

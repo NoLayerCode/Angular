@@ -10,7 +10,7 @@ import { Alert } from 'selenium-webdriver';
 export class PostCreateComponent implements OnInit {
 
   enteredValue = '';
-  tesOutput = 'hello';
+  tesOutput = '';
   constructor() {
     }
 
