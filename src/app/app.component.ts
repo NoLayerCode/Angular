@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { post } from 'selenium-webdriver/http';
+// import { post } from 'selenium-webdriver/http';
+import { Post } from './posts/post.model';
 
 @Component({
   selector: 'app-root',

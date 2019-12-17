@@ -1,6 +1,13 @@
 mat-card{
   display: block;
   margin-top: 1rem;
+  border-radius:10px;
+  border: 1px solid #ccc;
+  background: #fff;
+}
+
+mat-card:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
 }
 
 mat-form-field,

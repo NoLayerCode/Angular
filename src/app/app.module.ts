@@ -7,11 +7,9 @@ import { MatExpansionModule } from '@angular/material/expansion';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PostsComponent } from './posts/posts.component';
 import { PostCreateComponent } from './posts/post-create/post-create.component';
 import { HeaderComponent } from './header/header.component';
 import { PostListComponent } from './posts/post-list/post-list.component';
-import { from } from 'rxjs';
 
 @NgModule({
   // schemas: [
@@ -19,7 +17,6 @@ import { from } from 'rxjs';
   // ],
   declarations: [
     AppComponent,
-    PostsComponent,
     PostCreateComponent,
     HeaderComponent,
     PostListComponent,
