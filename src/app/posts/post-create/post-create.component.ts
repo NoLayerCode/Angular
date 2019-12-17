@@ -2,6 +2,7 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 // import { Alert } from 'selenium-webdriver';
 
 import { Post } from '../post.model';
+import { NgForm } from '@angular/forms';
 
 
 @Component({
@@ -22,8 +23,14 @@ export class PostCreateComponent implements OnInit {
   ngOnInit() {
   }
 
-  onClick() {
-    const post: Post = { title: this.enteredTitle, content: this.enteredContent };
+  onClick(form: NgForm) {
+    if (form.invalid){
+      return;
+    }
+    const post: Post = {
+       title: form.value.title,
+       content: form.value.content
+      };
 
     this.postCreated.emit(post);
   }
